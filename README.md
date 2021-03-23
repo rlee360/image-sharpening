@@ -54,10 +54,14 @@ Help options:
 
 ```
 
-Sharpening the provided `images/nasa_earth_blurry.png` on both gpu and cpu:
-
+Sharpening the provided `images/nasa_earth_blurry.png` on both gpu and cpu can be accomplished with:
 ```
-$ ./deblur --input images/nasa_earth_blurry.png --reference images/nasa1R3107_1000x1000.jpg --output_prefix output/nasa_output
+$ ./deblur
+```
+
+as the defaults already use the provided file paths. To be explicit, however, the command could be written as:
+```
+$ ./deblur --input images/nasa_earth_blurry.png --reference images/nasa1R3107_1000x1000.jpg --output_prefix output/nasa_output --device both
 ```
 
 As an example of sharpening the included `images/tree-blur.jpg` on the GPU only:
